@@ -35,7 +35,7 @@
         form{
             margin-top: 30px;
             input{
-                background: gray;
+                background: white(128, 128, 128);
                 border: 0;
                 outline: none;
                 margin: 0;
@@ -62,14 +62,5 @@
         }
     }
 
-    &_bottomCard {
-        background-color: white;
-        width: 350px;
-        border-radius: 1px;
-        padding: 10px 0 ;
-        border: 1px solid #eee;
-        text-align: center;
-        cursor: pointer;
-        margin-top: 30px;
-    }
+    
 }

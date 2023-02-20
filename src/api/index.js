@@ -1,6 +1,7 @@
-import { CREATE_USER } from "./Api"
+import { CREATE_USER, LOGIN_USER } from "./Api"
 
 
 export const REQUEST = {
-    CREATE_USER
+    CREATE_USER,
+    LOGIN_USER
 }
