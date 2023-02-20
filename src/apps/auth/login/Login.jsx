@@ -6,8 +6,11 @@ import { FormsValidate } from '../../../helpers/forms';
 import cls from "../../../assets/styles/login/Login.module.scss"
 import Logo from "../../../assets/images/logo/INSTAPNG.png"
 import { REQUEST } from '../../../api';
+import { Hooks } from '../../../hooks';
 
 export default function Login() {
+
+  const { goToHome } = Hooks.useLocations();
 
     const {
         register,
@@ -18,6 +21,7 @@ export default function Login() {
     const onSubmit = (data) => {
         if(data) {
           const request = REQUEST.LOGIN_USER(data);
+          
 
           request
             .then(res => {
@@ -25,6 +29,7 @@ export default function Login() {
 
               localStorage.setItem("access", data.access);
               localStorage.setItem("refresh", data.refresh)
+              goToHome();
             })
         }
     };
